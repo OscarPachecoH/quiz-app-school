@@ -1,0 +1,15 @@
+.nav-maestro {
+    background-color: #97cc04;
+}
+
+.nav-alumno {
+    background-color: #2d7dd2;
+}
+
+.nav-alumno .nav-item .nav-link, .nav-alumno .navbar-brand {
+    color: white !important;
+}
+
+.nav-alumno .nav-item .text-danger {
+    color: red !important;
+}

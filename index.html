@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <title>Quiz - Login</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form id="loginForm">
+        <h3>Inicio de Sesión</h3>
+
+        <label for="email">Correo Electronico</label>
+        <input type="email" placeholder="Correo electronico" id="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" required>
+
+        <button class="btn" type="submit">Iniciar sesión</button>
+    </form>
+
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/firebase-init.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            if(typeof window.login !== 'function'){
+                alert("El sistema de autentificación aun se esta cargando. Espera unos segundos e intenta de nuevo.");
+                return;
+            }
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            window.login(email, password);
+        });
+    </script>
+
+</body>
+</html>
