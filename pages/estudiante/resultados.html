@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,8 @@
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="/assets/css/card.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Dashboard - Estudiante</title>
+    <title>Mis resultados - Estudiante</title>
 </head>
-
 <body>
 
     <!--Spinner de carga-->
@@ -19,9 +17,13 @@
             <div class="spinner-border text-primary" style="width: 4rem; height: 4rem;" role="status">
                 <span class="visually-hidden">Cargando...</span>
             </div>
-            <h4 class="mt-4 fw-bold text-primary">Cargando dashboard</h4>
-            <p class="text-muted">Por favor espere un momento</p>
+            <h4 class="mt-4 fw-bold text-primary">Cargando Resultados..</h4>
         </div>
+    </div>
+
+    <div class="container mt-5 pt-4">
+        <h1 class="mb-4">Resultados</h1>
+        <div id="contenidoResultados"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
@@ -29,19 +31,16 @@
     <script src="../../assets/js/firebase-init.js"></script>
     <script src="../../assets/js/auth.js"></script>
     <script src="../../assets/js/components/navbar.js"></script>
-    <script src="../../assets/js/components/card.js"></script>
+    <script src="../../assets/js/resultados.js"></script>
     <script>
         setTimeout(() => {
             if (typeof window.protectPageAndRenderNavbar === 'function') {
                 console.log("Ejecutando protectPageAndRenderNavbar...");
                 window.protectPageAndRenderNavbar();
-                window.renderTestInDashboard();
             } else {
                 console.error("protectPageAndRenderNavbar NO está definida después de 3s");
             }
         }, 3000);
     </script>
-
 </body>
-
 </html>

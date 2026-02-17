@@ -26,10 +26,10 @@ function renderNavbar(userData) {
                             </li>
                         ` : `
                             <li class="nav-item">
-                                <a class="nav-link" href="examen.html">Mis Examenes</a>
+                                <a class="nav-link" href="/pages/estudiante/dashboard.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="examen.html">Mis Resultados</a>
+                                <a class="nav-link" href="/pages/estudiante/resultados.html">Mis Resultados</a>
                             </li>
                         `}
                     </ul>

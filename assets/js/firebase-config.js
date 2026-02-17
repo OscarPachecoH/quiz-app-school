@@ -1,3 +1,4 @@
+// Remplaza aquí con tus creenciales de Firebase
 window.firebaseConfig = {
   apiKey: import.meta.env?.apiKey,
   authDomain: import.meta.env?.authDomain,
@@ -7,3 +8,4 @@ window.firebaseConfig = {
   appId: import.meta?.appId,
   databaseURL: import.meta?.databaseURL
 };
+

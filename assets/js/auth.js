@@ -94,9 +94,11 @@ waitForFirebase(() => {
                 } 
 
                 if(typeof window.renderExamenesCards === 'function'){
-
                     window.renderExamenesCards(userData)
+                }
 
+                if(typeof window.renderResultados === 'function'){
+                    window.renderResultados(userData);
                 }
 
                 const loadingScreen = document.getElementById('loadingScreen');
