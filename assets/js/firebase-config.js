@@ -8,4 +8,3 @@ window.firebaseConfig = {
   appId: import.meta?.appId,
   databaseURL: import.meta?.databaseURL
 };
-
